@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Charger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="Yxx-9a-lSg">
+                                <rect key="frame" x="4" y="269.5" width="406" height="367"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Charger'a hoş geldiniz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uSz-bD-FBy">
+                                        <rect key="frame" x="83" y="0.0" width="240" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Charger'ı kulanmak için giriş yapmanız gerekiyor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F5E-wX-ycp">
+                                        <rect key="frame" x="20" y="100" width="366" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email adresi giriniz" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kwj-vf-etx">
+                                        <rect key="frame" x="20" y="190.5" width="366" height="66.5"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="_placeHolderColor">
+                                                <color key="value" name="grayColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NdW-ab-Hyb">
+                                        <rect key="frame" x="120" y="327" width="166" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="sLm-HO-swi"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="GİRİŞ YAP">
+                                            <color key="baseForegroundColor" red="0.082352943720000002" green="0.1725490093" blue="0.28627452250000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="NdW-ab-Hyb" firstAttribute="leading" secondItem="Yxx-9a-lSg" secondAttribute="leading" constant="120" id="B99-gc-C1H"/>
+                                    <constraint firstAttribute="trailing" secondItem="Kwj-vf-etx" secondAttribute="trailing" constant="20" id="PuB-8n-oCa"/>
+                                    <constraint firstAttribute="trailing" secondItem="F5E-wX-ycp" secondAttribute="trailing" constant="20" id="csG-Fz-scv"/>
+                                    <constraint firstItem="Kwj-vf-etx" firstAttribute="leading" secondItem="Yxx-9a-lSg" secondAttribute="leading" constant="20" id="lP0-kW-Bmd"/>
+                                    <constraint firstItem="F5E-wX-ycp" firstAttribute="leading" secondItem="Yxx-9a-lSg" secondAttribute="leading" constant="20" id="oVM-Lr-YVl"/>
+                                    <constraint firstAttribute="trailing" secondItem="NdW-ab-Hyb" secondAttribute="trailing" constant="120" id="qS3-s5-uFM"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Charger'a Hoşgelidniz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="klm-Kl-AwA">
+                                <rect key="frame" x="20" y="64" width="374" height="25.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Yxx-9a-lSg" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="0Xy-ax-97F"/>
+                            <constraint firstItem="klm-Kl-AwA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="LoP-QY-JF8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="klm-Kl-AwA" secondAttribute="trailing" constant="20" id="YIr-wb-Knw"/>
+                            <constraint firstItem="Yxx-9a-lSg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Zvo-hW-giy"/>
+                            <constraint firstItem="klm-Kl-AwA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="i4z-bU-wst"/>
+                            <constraint firstItem="Yxx-9a-lSg" firstAttribute="top" secondItem="klm-Kl-AwA" secondAttribute="bottom" constant="180" id="r4j-Nl-WMg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="EmailInput" destination="Kwj-vf-etx" id="EbG-LU-nyE"/>
+                        <outlet property="ViewUI" destination="8bC-Xf-vdC" id="mCE-H1-uoY"/>
+                        <outlet property="emailInput" destination="Kwj-vf-etx" id="Smp-sf-dOL"/>
+                        <outlet property="introTextGray" destination="F5E-wX-ycp" id="7eg-jd-l3l"/>
+                        <outlet property="introTextWhite" destination="uSz-bD-FBy" id="0s2-QU-kTg"/>
+                        <outlet property="pageLabel" destination="klm-Kl-AwA" id="KfQ-94-2BT"/>
+                        <outlet property="view" destination="8bC-Xf-vdC" id="xYx-zU-pbK"/>
+                        <outlet property="viewUI" destination="8bC-Xf-vdC" id="wN6-IA-QBg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-17.39130434782609" y="49.553571428571423"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="grayColor">
+            <color red="0.71764705882352942" green="0.74117647058823533" blue="0.79607843137254897" alpha="0.83855241537094116" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

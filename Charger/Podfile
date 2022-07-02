@@ -1,0 +1,7 @@
+platform :ios, '13.0'
+
+target 'Charger' do
+
+  pod 'lottie-ios'
+
+end

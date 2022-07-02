@@ -1,0 +1,6 @@
+module Pods_Charger {
+  umbrella header "Pods-Charger-umbrella.h"
+
+  export *
+  module * { export * }
+}
