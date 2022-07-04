@@ -7,6 +7,8 @@
 
 import SwiftUI
 
-struct login {
-    let email : String	
+struct login: Encodable{
+    let email : String
+    let  deviceUDID : Int
+
 }

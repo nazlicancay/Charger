@@ -13,6 +13,11 @@
 				<dict>
 					<key>UISceneConfigurationName</key>
 					<string>Default Configuration</string>
+					<key>NSAppTransportSecurity</key>
+					<dict>
+						<key>NSAllowsArbitraryLoads</key>
+						<true/>
+					</dict>
 					<key>UISceneDelegateClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
 					<key>UISceneStoryboardFile</key>
@@ -27,5 +32,10 @@
 	<array>
 		<string>BigCaslon.ttf</string>
 	</array>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 </dict>
 </plist>
