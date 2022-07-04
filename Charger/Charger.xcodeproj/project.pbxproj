@@ -28,6 +28,7 @@
 		62E2797C28708D38005FF57E /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E2797B28708D38005FF57E /* RegisterModel.swift */; };
 		62E2797F28708F96005FF57E /* apiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E2797E28708F96005FF57E /* apiManager.swift */; };
 		62E279822870935D005FF57E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 62E279812870935D005FF57E /* Alamofire */; };
+		62FC679E28736B9F00906323 /* ProfilePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FC679D28736B9F00906323 /* ProfilePageViewController.swift */; };
 		8967C6FCF94D8C9D7D28A73D /* libPods-Charger.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB575A5C4F31077E24E1EAB9 /* libPods-Charger.a */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,7 @@
 		62AF897F286C91BE00B0DDC7 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		62E2797B28708D38005FF57E /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
 		62E2797E28708F96005FF57E /* apiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apiManager.swift; sourceTree = "<group>"; };
+		62FC679D28736B9F00906323 /* ProfilePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePageViewController.swift; sourceTree = "<group>"; };
 		BB575A5C4F31077E24E1EAB9 /* libPods-Charger.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Charger.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8D8F022757154D4D8728EA1 /* Pods-Charger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Charger.debug.xcconfig"; path = "Target Support Files/Pods-Charger/Pods-Charger.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,6 +128,7 @@
 		62AF8942286C591700B0DDC7 /* Charger */ = {
 			isa = PBXGroup;
 			children = (
+				62FC679C28736B7900906323 /* ProfilePage */,
 				62E82E9B2871FC830095686C /* AppointmentPage */,
 				62E2797D28708F81005FF57E /* ApiManager */,
 				62E2797A28708D28005FF57E /* Register */,
@@ -215,6 +218,14 @@
 				62756BDD287307D600686DD6 /* AppointmentViewController.swift */,
 			);
 			name = AppointmentPage;
+			sourceTree = "<group>";
+		};
+		62FC679C28736B7900906323 /* ProfilePage */ = {
+			isa = PBXGroup;
+			children = (
+				62FC679D28736B9F00906323 /* ProfilePageViewController.swift */,
+			);
+			name = ProfilePage;
 			sourceTree = "<group>";
 		};
 		B73320D06A1DB88BFA3CF886 /* Frameworks */ = {
@@ -411,6 +422,7 @@
 				62AF897A286C6FA400B0DDC7 /* Theme.swift in Sources */,
 				62AF8944286C591700B0DDC7 /* AppDelegate.swift in Sources */,
 				62AF8946286C591700B0DDC7 /* SceneDelegate.swift in Sources */,
+				62FC679E28736B9F00906323 /* ProfilePageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

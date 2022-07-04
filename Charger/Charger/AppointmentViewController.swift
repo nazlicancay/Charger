@@ -9,12 +9,30 @@ import UIKit
 
 class AppointmentViewController: UIViewController {
 
+    @IBOutlet weak var ProfileButton: UIButton!
+  
+    
+    @IBOutlet var AppointmentPageView: UIView!
+    @IBOutlet weak var AppointmentCreateButton: UIButton!
+    @IBOutlet weak var RandevuOluştur: UIButton!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        AppointmentView()
 
         // Do any additional setup after loading the view.
     }
     
+    func AppointmentView(){
+        AppointmentCreateButton.setImage(UIImage(named: "CreateAppointment"), for: .normal)
+        
+        ProfileButton.setImage(UIImage(named: "ProfileBadge"), for: .normal)
+        AppointmentPageView.backgroundColor = Theme.backgroundColor
+        
+        
+    }
 
     /*
     // MARK: - Navigation
