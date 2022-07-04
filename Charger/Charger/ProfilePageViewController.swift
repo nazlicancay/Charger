@@ -15,13 +15,15 @@ class ProfilePageViewController: UIViewController {
     
     @IBOutlet var ProfilePageBakgraund: UIView!
     override func viewDidLoad() {
-        ProfilePageView()
+       
+        ApiManager.APIInstance.getProfile(email: Email, UDID: ID)
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
     func ProfilePageView(){
+        ProfilePageView()
         ProfilePageBakgraund.backgroundColor = Theme.backgroundColor
        
         

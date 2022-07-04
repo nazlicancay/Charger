@@ -12,8 +12,12 @@ struct login: Encodable {
     let  deviceUDID : Int
 
 }
+struct Response : Codable{
+    let result : Profile
+    let status : Int
+}
 
-struct getProfile : Codable {
+struct Profile : Codable {
     let email: String
     let deviceUDID : Int
 }

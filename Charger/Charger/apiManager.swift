@@ -7,6 +7,7 @@
 
 import Foundation
 import Alamofire
+import SwiftUI
 
 
 let registerUrl = "http://ec2-18-197-100-203.eu-central-1.compute.amazonaws.com:8080/auth/login"
@@ -46,4 +47,39 @@ class ApiManager{
         
     }
     
+    func getProfile(email : UILabel , UDID : UILabel){
+        
+        URLSession.shared.dataTask(with: URL(string: registerUrl)!, completionHandler: { data, response, error in
+            
+            guard let data = data , error == nil
+            else{ print("error")
+                return
+                
+            }
+            var result : Response?
+            do{
+                result = try JSONDecoder().decode(Response.self, from: data)
+                
+            }
+            catch{
+                print("error")
+            }
+            
+            guard let json = result else{
+                return
+            }
+            
+            print("KLALFLSDF")
+            print(json.result.email)
+            email.text = json.result.email
+            UDID.text = String(json.result.deviceUDID)
+            
+           
+            
+        }).resume()
+        
+    }
+    
 }
+
+
