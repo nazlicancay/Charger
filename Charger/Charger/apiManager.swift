@@ -26,7 +26,7 @@ class ApiManager{
                 
                 do{
                    let json = try JSONSerialization.jsonObject(with: data!)
-                    let profile = try JSONDecoder().decode(Profile.self , from: data!)
+                   
                     if response.response?.statusCode == 200{
                         
                         completionHandler(true)
@@ -35,8 +35,7 @@ class ApiManager{
                         completionHandler(false)
                     }
                    
-                    print(profile.email)
-                   print(profile.Getprofile())
+                    
                     print(json)
                    
                 }catch{
