@@ -18,8 +18,9 @@ struct Response : Codable{
 }
 
 struct Profile : Codable {
-    let email: String
-    let deviceUDID : Int
+    var email: String
+    var token : String
+    var deviceUDID : Int
     
     func Getprofile() {
         print("email: \(email), deviceUDID: \(deviceUDID)" )

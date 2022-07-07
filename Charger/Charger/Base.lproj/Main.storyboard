@@ -37,7 +37,7 @@
                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="Register:" destination="BYZ-38-t0r" eventType="touchUpInside" id="abf-Aa-YPF"/>
+                                    <action selector="Register:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pFF-Ju-rQA"/>
                                     <segue destination="ODI-6S-F4B" kind="show" id="XxP-4R-A8S"/>
                                 </connections>
                             </button>
@@ -49,9 +49,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="Register:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="G91-co-V4t"/>
-                                </connections>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -69,7 +66,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Charger'a hoşgeldiniz" id="YjX-ox-sRy"/>
                     <connections>
-                        <outlet property="EmailInput" destination="Kwj-vf-etx" id="EbG-LU-nyE"/>
+                        <outlet property="EmailInput" destination="Kwj-vf-etx" id="9P9-bd-RgT"/>
                         <outlet property="ViewUI" destination="8bC-Xf-vdC" id="mCE-H1-uoY"/>
                         <outlet property="introTextGray" destination="F5E-wX-ycp" id="7eg-jd-l3l"/>
                         <outlet property="view" destination="8bC-Xf-vdC" id="xYx-zU-pbK"/>

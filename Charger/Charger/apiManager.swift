@@ -25,7 +25,7 @@ class ApiManager{
             case .success(let data):
                 
                 do{
-                   let json = try JSONSerialization.jsonObject(with: data!)
+                    let json = try JSONSerialization.jsonObject(with: data!,options: [])
                    
                     if response.response?.statusCode == 200{
                         
@@ -34,10 +34,7 @@ class ApiManager{
                     else{
                         completionHandler(false)
                     }
-                   
-                    
-                    print(json)
-                   
+                   print(json)
                 }catch{
                     completionHandler(false)
 
@@ -54,6 +51,8 @@ class ApiManager{
         }
 
     }
+    
+
     func jsonToString(json: AnyObject){
         do {
             let data1 =  try JSONSerialization.data(withJSONObject: json, options: JSONSerialization.WritingOptions.prettyPrinted) // first of all convert json to the data
@@ -107,4 +106,17 @@ class ApiManager{
 
     
 
+
+extension NSDictionary {
+  
+  var swiftDictionary: [String : AnyObject] {
+    var swiftDictionary: [String : AnyObject] = [:]
+      let keys = self.allKeys.compactMap { $0 as? String }
+    for key in keys {
+      let keyValue = self.value(forKey: key) as AnyObject
+      swiftDictionary[key] = keyValue
+    }
+    return swiftDictionary
+  }
+}
 
