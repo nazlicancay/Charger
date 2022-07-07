@@ -19,7 +19,7 @@ class ProfilePageViewController: UIViewController {
         
         super.viewDidLoad()
         ProfilePageView()
-       // ApiManager.APIInstance.GetProfile()
+        ApiManager.APIInstance.GetProfile()
 
         // Do any additional setup after loading the view.
     }

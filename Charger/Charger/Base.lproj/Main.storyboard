@@ -169,7 +169,7 @@
         <!--Şehir Seçin-->
         <scene sceneID="2ob-TV-Xds">
             <objects>
-                <viewController id="yZm-XX-Qfi" sceneMemberID="viewController">
+                <viewController id="yZm-XX-Qfi" customClass="ChooseCityViewController" customModule="Charger" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KK6-zp-BFp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
