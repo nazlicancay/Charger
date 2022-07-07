@@ -50,6 +50,7 @@ class ViewController: UIViewController {
         
         ApiManager.APIInstance.callingRegisterAPI(register: register){(isSuccess) in
             if isSuccess {
+                
                 debugPrint("register succeesfully")
                 
             }

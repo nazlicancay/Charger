@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		62756BDE287307D600686DD6 /* AppointmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62756BDD287307D600686DD6 /* AppointmentViewController.swift */; };
+		629D1FDA287730B600E8F641 /* ChooseCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D1FD9287730B600E8F641 /* ChooseCityViewController.swift */; };
 		62AF8944286C591700B0DDC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AF8943286C591700B0DDC7 /* AppDelegate.swift */; };
 		62AF8946286C591700B0DDC7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AF8945286C591700B0DDC7 /* SceneDelegate.swift */; };
 		62AF8948286C591700B0DDC7 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AF8947286C591700B0DDC7 /* RegisterViewController.swift */; };
@@ -52,6 +53,7 @@
 /* Begin PBXFileReference section */
 		20AD6294E646B0A34FE82330 /* Pods-Charger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Charger.release.xcconfig"; path = "Target Support Files/Pods-Charger/Pods-Charger.release.xcconfig"; sourceTree = "<group>"; };
 		62756BDD287307D600686DD6 /* AppointmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentViewController.swift; sourceTree = "<group>"; };
+		629D1FD9287730B600E8F641 /* ChooseCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCityViewController.swift; sourceTree = "<group>"; };
 		62AF8940286C591700B0DDC7 /* Charger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Charger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62AF8943286C591700B0DDC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62AF8945286C591700B0DDC7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +105,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		629D1FD82877309D00E8F641 /* ChooseCity */ = {
+			isa = PBXGroup;
+			children = (
+				629D1FD9287730B600E8F641 /* ChooseCityViewController.swift */,
+			);
+			name = ChooseCity;
+			sourceTree = "<group>";
+		};
 		62AF8937286C591700B0DDC7 = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +138,7 @@
 		62AF8942286C591700B0DDC7 /* Charger */ = {
 			isa = PBXGroup;
 			children = (
+				629D1FD82877309D00E8F641 /* ChooseCity */,
 				62FC679C28736B7900906323 /* ProfilePage */,
 				62E82E9B2871FC830095686C /* AppointmentPage */,
 				62E2797D28708F81005FF57E /* ApiManager */,
@@ -418,6 +429,7 @@
 				62756BDE287307D600686DD6 /* AppointmentViewController.swift in Sources */,
 				62AF8948286C591700B0DDC7 /* RegisterViewController.swift in Sources */,
 				62E2797C28708D38005FF57E /* RegisterModel.swift in Sources */,
+				629D1FDA287730B600E8F641 /* ChooseCityViewController.swift in Sources */,
 				62E2797F28708F96005FF57E /* apiManager.swift in Sources */,
 				62AF897A286C6FA400B0DDC7 /* Theme.swift in Sources */,
 				62AF8944286C591700B0DDC7 /* AppDelegate.swift in Sources */,

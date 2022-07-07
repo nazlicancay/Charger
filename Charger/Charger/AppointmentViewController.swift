@@ -9,6 +9,8 @@ import UIKit
 
 class AppointmentViewController: UIViewController {
 
+    @IBOutlet weak var CreateAppointmentButton: UIButton!
+    
     @IBOutlet weak var ProfileButton: UIButton!
   
     
@@ -22,6 +24,7 @@ class AppointmentViewController: UIViewController {
         super.viewDidLoad()
         AppointmentView()
 
+
         // Do any additional setup after loading the view.
     }
     
@@ -29,6 +32,7 @@ class AppointmentViewController: UIViewController {
         AppointmentCreateButton.setImage(UIImage(named: "CreateAppointment"), for: .normal)
         
         ProfileButton.setImage(UIImage(named: "ProfileBadge"), for: .normal)
+        
         AppointmentPageView.backgroundColor = Theme.backgroundColor
         
         

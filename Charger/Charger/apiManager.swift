@@ -18,11 +18,12 @@ class ApiManager{
     func callingRegisterAPI(register : login , completionHandler : @escaping (Bool)->()){
         let headers: HTTPHeaders = [.contentType("application/json")]
         
-        AF.request(registerUrl, method: .post, parameters: register, encoder: JSONParameterEncoder.default, headers:headers).response{ response in debugPrint(response)
+        AF.request(registerUrl, method: .post, parameters: register, encoder: JSONParameterEncoder.default, headers:headers).response{ response in //debugPrint(response)
             
             switch response.result {
                 
             case .success(let data):
+                
                 do{
                    let json = try JSONSerialization.jsonObject(with: data!)
                     if response.response?.statusCode == 200{
@@ -31,7 +32,8 @@ class ApiManager{
                     else{
                         completionHandler(false)
                     }
-                print(json)
+                    print(json)
+                  
                 }catch{
                     completionHandler(false)
 
@@ -43,43 +45,38 @@ class ApiManager{
             }
             
         }
-        
-        
+
     }
     
-    func getProfile(email : UILabel , UDID : UILabel){
+    func GetProfile( ){
+        debugPrint("ldşskfşlsdf")
+        guard let url = URL(string: "http://ec2-18-197-100-203.eu-central-1.compute.amazonaws.com:8080/auth/login") else {return}
         
-        URLSession.shared.dataTask(with: URL(string: registerUrl)!, completionHandler: { data, response, error in
+        let request = URLRequest(url:url)
+        
+        URLSession.shared.dataTask(with: request) {(data, response , error ) in
+            if let error = error{
+                print(error.localizedDescription)
+            }
+            guard let data = data else{ return}
             
-            guard let data = data , error == nil
-            else{ print("error")
-                return
-                
-            }
-            var result : Response?
-            do{
-                result = try JSONDecoder().decode(Response.self, from: data)
-                
-            }
-            catch{
-                print("error")
-            }
+            let decoder = JSONDecoder()
             
-            guard let json = result else{
+            guard let  decodedData = try? decoder.decode(Profile.self, from: data) else {
                 return
             }
             
-            print("KLALFLSDF")
-            print(json.result.email)
-            email.text = json.result.email
-            UDID.text = String(json.result.deviceUDID)
-            
-           
-            
-        }).resume()
-        
+            print(decodedData.email)
+            print(decodedData.deviceUDID)
+                    
+        }.resume()
+               
+    }
     }
     
-}
+   
+    
+
+    
 
 

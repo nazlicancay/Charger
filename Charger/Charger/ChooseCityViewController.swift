@@ -1,34 +1,20 @@
 //
-//  ProfilePageViewController.swift
+//  ChooseCityViewController.swift
 //  Charger
 //
-//  Created by Nazlıcan Çay on 4.07.2022.
+//  Created by Nazlıcan Çay on 7.07.2022.
 //
 
 import UIKit
 
-class ProfilePageViewController: UIViewController {
+class ChooseCityViewController: UIViewController {
 
-    @IBOutlet weak var ID: UILabel!
-    
-    @IBOutlet weak var Email: UILabel!
-    
-    @IBOutlet var ProfilePageBakgraund: UIView!
     override func viewDidLoad() {
-       
-        
         super.viewDidLoad()
-        ProfilePageView()
-       // ApiManager.APIInstance.GetProfile()
 
         // Do any additional setup after loading the view.
     }
     
-    func ProfilePageView(){
-        ProfilePageBakgraund.backgroundColor = Theme.backgroundColor
-       
-        
-    }
 
     /*
     // MARK: - Navigation

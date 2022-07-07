@@ -20,4 +20,8 @@ struct Response : Codable{
 struct Profile : Codable {
     let email: String
     let deviceUDID : Int
+    
+    func Getprofile() {
+        print("email: \(email), deviceUDID: \(deviceUDID)" )
+    }
 }
