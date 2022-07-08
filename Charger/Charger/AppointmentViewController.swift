@@ -15,8 +15,7 @@ class AppointmentViewController: UIViewController {
   
     
     @IBOutlet var AppointmentPageView: UIView!
-    @IBOutlet weak var AppointmentCreateButton: UIButton!
-    @IBOutlet weak var RandevuOluştur: UIButton!
+  
     
     
     
@@ -29,7 +28,7 @@ class AppointmentViewController: UIViewController {
     }
     
     func AppointmentView(){
-        AppointmentCreateButton.setImage(UIImage(named: "CreateAppointment"), for: .normal)
+        CreateAppointmentButton.setImage(UIImage(named: "CreateAppointment"), for: .normal)
         
         ProfileButton.setImage(UIImage(named: "ProfileBadge"), for: .normal)
         

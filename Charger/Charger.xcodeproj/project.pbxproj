@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6224591128789299008E9D7D /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6224591028789299008E9D7D /* TableViewCell.swift */; };
+		622459132878C4B2008E9D7D /* CityResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622459122878C4B2008E9D7D /* CityResponseModel.swift */; };
 		62756BDE287307D600686DD6 /* AppointmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62756BDD287307D600686DD6 /* AppointmentViewController.swift */; };
 		629D1FDA287730B600E8F641 /* ChooseCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D1FD9287730B600E8F641 /* ChooseCityViewController.swift */; };
 		62AF8944286C591700B0DDC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AF8943286C591700B0DDC7 /* AppDelegate.swift */; };
@@ -52,6 +54,8 @@
 
 /* Begin PBXFileReference section */
 		20AD6294E646B0A34FE82330 /* Pods-Charger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Charger.release.xcconfig"; path = "Target Support Files/Pods-Charger/Pods-Charger.release.xcconfig"; sourceTree = "<group>"; };
+		6224591028789299008E9D7D /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		622459122878C4B2008E9D7D /* CityResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityResponseModel.swift; sourceTree = "<group>"; };
 		62756BDD287307D600686DD6 /* AppointmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentViewController.swift; sourceTree = "<group>"; };
 		629D1FD9287730B600E8F641 /* ChooseCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCityViewController.swift; sourceTree = "<group>"; };
 		62AF8940286C591700B0DDC7 /* Charger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Charger.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				629D1FD9287730B600E8F641 /* ChooseCityViewController.swift */,
+				6224591028789299008E9D7D /* TableViewCell.swift */,
+				622459122878C4B2008E9D7D /* CityResponseModel.swift */,
 			);
 			name = ChooseCity;
 			sourceTree = "<group>";
@@ -430,7 +436,9 @@
 				62AF8948286C591700B0DDC7 /* RegisterViewController.swift in Sources */,
 				62E2797C28708D38005FF57E /* RegisterModel.swift in Sources */,
 				629D1FDA287730B600E8F641 /* ChooseCityViewController.swift in Sources */,
+				622459132878C4B2008E9D7D /* CityResponseModel.swift in Sources */,
 				62E2797F28708F96005FF57E /* apiManager.swift in Sources */,
+				6224591128789299008E9D7D /* TableViewCell.swift in Sources */,
 				62AF897A286C6FA400B0DDC7 /* Theme.swift in Sources */,
 				62AF8944286C591700B0DDC7 /* AppDelegate.swift in Sources */,
 				62AF8946286C591700B0DDC7 /* SceneDelegate.swift in Sources */,

@@ -12,17 +12,15 @@ struct login: Encodable {
     let  deviceUDID : Int
 
 }
-struct Response : Codable{
+/*struct Response : Codable{
     let result : Profile
     let status : Int
 }
-
-struct Profile : Codable {
+*/
+struct Profile : Decodable {
     var email: String
     var token : String
-    var deviceUDID : Int
+    var userID : Int
     
-    func Getprofile() {
-        print("email: \(email), deviceUDID: \(deviceUDID)" )
-    }
+    
 }

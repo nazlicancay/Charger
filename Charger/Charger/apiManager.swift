@@ -14,12 +14,11 @@ let registerUrl = "http://ec2-18-197-100-203.eu-central-1.compute.amazonaws.com:
 
 class ApiManager{
     static let APIInstance = ApiManager()
-
+    var UserInfo = [String]()
     func callingRegisterAPI(register : login , completionHandler : @escaping (Bool)->()){
         let headers: HTTPHeaders = [.contentType("application/json")]
         
         AF.request(registerUrl, method: .post, parameters: register, encoder: JSONParameterEncoder.default, headers:headers).response{ response in //debugPrint(response)
-            
             switch response.result {
                 
             case .success(let data):
@@ -28,13 +27,14 @@ class ApiManager{
                     let json = try JSONSerialization.jsonObject(with: data!,options: [])
                    
                     if response.response?.statusCode == 200{
-                        
+                        self.UserInfo  =  self.GetProfile(data: data!)
                         completionHandler(true)
                     }
                     else{
                         completionHandler(false)
                     }
-                   print(json)
+                    print(json)
+                   
                 }catch{
                     completionHandler(false)
 
@@ -64,59 +64,48 @@ class ApiManager{
         
     }
     
-    func GetProfile( ){
-        debugPrint("ldşskfşlsdf")
-        guard let url = URL(string: "http://ec2-18-197-100-203.eu-central-1.compute.amazonaws.com:8080/auth/login")
-        else {
-            print("url")
-            return
-            
-        }
-        
-        let request = URLRequest(url:url)
-        
-        URLSession.shared.dataTask(with: request) {(data, response , error ) in
-            if let error = error{
-                
-                print(error.localizedDescription)
-            }
-            guard let data = data
-            else{
-                print("data")
-                return
-                
-            }
-            
-            let decoder = JSONDecoder()
-            
-            guard let  decodedData = try? decoder.decode(Profile.self, from: data) else {
-                return
-            }
-            
-            print(decodedData.email)
-            print(decodedData.deviceUDID)
-                    
-        }.resume()
-               
+    func GetProfile(data  : Data ) -> (Array<String> ){
+        /// creating an array to store user infos
+        /// [0] -> email
+        /// [1] -> token
+        /// [2] -> UserId
+        let DecodedData = try! JSONDecoder().decode(Profile.self, from: data)
+        var datas = [String]()
+        let token = DecodedData.token
+        let email = DecodedData.email
+        let UserId = DecodedData.userID
+        datas.append(email)
+        datas.append(token)
+        datas.append(String (UserId))
+        return datas
+
+    
     }
+    
+    func getCityNames(){
+        print("----------------")
+        print(UserInfo[2])
+       // let id : Int? = Int(UserInfo[2]))
+        let CityApi = URL(string: "ec2-18-197-100-203.eu-central-1.compute.amazonaws.com:8080/provinces?userID=" + "\(UserInfo[2])")
+        if let unwrappedURL = CityApi {
+            var request = URLRequest(url: unwrappedURL)
+            request.addValue("\(UserInfo[1])", forHTTPHeaderField: "token")
+            let dataTask = URLSession.shared.dataTask(with: request) { (data, response, error) in
+                // you should put in error handling code, too
+                if let data = data {
+                    do {
+                        let json = try JSONDecoder().decode(CityResponse.self, from: data) as CityResponse
+                        // HERE'S WHERE YOUR DATA IS
+                        print(json.CityResponse.count)
+                    } catch {
+                        print(error.localizedDescription)
+                    }
+                }
+            }
+            dataTask.resume()
     }
     
    
-    
 
-    
-
-
-extension NSDictionary {
-  
-  var swiftDictionary: [String : AnyObject] {
-    var swiftDictionary: [String : AnyObject] = [:]
-      let keys = self.allKeys.compactMap { $0 as? String }
-    for key in keys {
-      let keyValue = self.value(forKey: key) as AnyObject
-      swiftDictionary[key] = keyValue
-    }
-    return swiftDictionary
-  }
 }
-
+}

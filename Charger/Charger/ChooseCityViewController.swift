@@ -7,13 +7,41 @@
 
 import UIKit
 
-class ChooseCityViewController: UIViewController {
+class ChooseCityViewController: UIViewController , UITableViewDataSource, UITableViewDelegate {
+    
+
+    @IBOutlet weak var Background: UIView!
+    @IBOutlet var chooseCityBackground: TableViewCell!
+    @IBOutlet weak var TableView: UITableView!
 
     override func viewDidLoad() {
+        ApiManager.APIInstance.getCityNames()
+
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 81
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+        {
+            let tableViewCell = tableView.dequeueReusableCell(withIdentifier: "CityTableCellId") as! TableViewCell
+            
+           
+
+            tableViewCell.cityNameLabel.text = "deneme"
+            tableViewCell.cityNameLabel.textColor = Theme.textColor
+            chooseCityBackground.backgroundColor = Theme.backgroundColor
+            Background.backgroundColor = Theme.backgroundColor
+            
+            return tableViewCell
+        }
+        
     
 
     /*

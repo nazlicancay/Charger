@@ -11,21 +11,28 @@ class ProfilePageViewController: UIViewController {
 
     @IBOutlet weak var ID: UILabel!
     
+    @IBOutlet weak var LogoutButton: UIButton!
+    @IBOutlet weak var ProfileBadge: UIImageView!
     @IBOutlet weak var Email: UILabel!
     
+    @IBOutlet weak var UserInfoStack: UIStackView!
     @IBOutlet var ProfilePageBakgraund: UIView!
     override func viewDidLoad() {
        
         
         super.viewDidLoad()
         ProfilePageView()
-        ApiManager.APIInstance.GetProfile()
 
         // Do any additional setup after loading the view.
     }
     
     func ProfilePageView(){
         ProfilePageBakgraund.backgroundColor = Theme.backgroundColor
+        LogoutButton.setImage(UIImage(named: "Logout Button"), for: .normal)
+        Email.textColor = Theme.textColor
+        ID.textColor = Theme.textColor
+        Email.text = (ApiManager.APIInstance.UserInfo[0]) as? String
+        ID.text = (ApiManager.APIInstance.UserInfo[2] ) as? String
        
         
     }
