@@ -15,7 +15,8 @@ class ChooseCityViewController: UIViewController , UITableViewDataSource, UITabl
     @IBOutlet weak var TableView: UITableView!
 
     override func viewDidLoad() {
-        ApiManager.APIInstance.getCityNames()
+        ApiManager.APIInstance.Deneme()
+      
 
         super.viewDidLoad()
 

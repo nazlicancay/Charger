@@ -51,18 +51,7 @@ class ApiManager{
         }
 
     }
-    
 
-    func jsonToString(json: AnyObject){
-        do {
-            let data1 =  try JSONSerialization.data(withJSONObject: json, options: JSONSerialization.WritingOptions.prettyPrinted) // first of all convert json to the data
-            let convertedString = String(data: data1, encoding: String.Encoding.utf8) // the data will be converted to the string
-            print(convertedString ?? "defaultvalue")
-        } catch let myJSONError {
-            print(myJSONError)
-        }
-        
-    }
     
     func GetProfile(data  : Data ) -> (Array<String> ){
         /// creating an array to store user infos
@@ -79,39 +68,71 @@ class ApiManager{
         datas.append(String (UserId))
         return datas
 
-    
+       
     }
     
     func getCityNames(){
-        print("----------------")
-        print(UserInfo[2])
-        let id : Int? = Int(UserInfo[2])
-        let CityApi = URL(string: "ec2-18-197-100-203.eu-central-1.compute.amazonaws.com:8080/provinces?userID=" + "\(id)")
-        if let unwrappedURL = CityApi {
+        print("------------------------------")
+        let fortniteChallengesURL = URL(string: "http://ec2-18-197-100-203.eu-central-1.compute.amazonaws.com:8080/provinces?userID=81")
+        if let unwrappedURL = fortniteChallengesURL {
             var request = URLRequest(url: unwrappedURL)
-            request.addValue("\(UserInfo[1])", forHTTPHeaderField: "token")
-            let defaultSession =  URLSession(configuration: .default)
-            let dataTask = defaultSession.dataTask(with: request){(data: Data? , responds :URLResponse? ,error :Error?) in
-                      
-                      if(error != nil){
-                          print(error)
-                          return
-                      }
-                      
-                      do{
-                          let json = try JSONDecoder().decode(CityResponse.self, from: data!)
-                          print(json.CityResponse.count)
-                      }
-                      catch {
-                          print(error)
-                          return
-                      }
-                          
-                  }
-                  dataTask.resume()
-    }
-    
-   
+            request.addValue("token", forHTTPHeaderField:  "\(UserInfo[1])")
+            let dataTask = URLSession.shared.dataTask(with: request) { (data, response, error) in
+                // you should put in error handling code, too
+                if let data = data {
+                    do {
+                        let json = try JSONDecoder().decode(CityResponse.self, from: data) as CityResponse
+                        // HERE'S WHERE YOUR DATA IS
+                        print(json.CityResponse.self)
+                    } catch {
+                        print(error)
+                    }
+                }
+            }
+            dataTask.resume()
+        }
 
 }
+    
+    func ApiCall(completion:@escaping (_ data:Data?,_ error:Error?)->Void) {
+
+       let url = URL(string: "ec2-18-197-100-203.eu-central-1.compute.amazonaws.com:8080/provinces?userID=" + "\(UserInfo[2])")!
+
+       var request = URLRequest(url: url)
+       request.allHTTPHeaderFields = [
+                "content-type": "application/json",
+                "token": "\(UserInfo[1])",
+                "cache-control": "no-cache",
+                ]
+    //// you can write "Bearer" if you are requesting url as a user from server like its only use for you
+    ////if not only for you but for a group of users or for an app you shold only wirte the token string
+
+
+    URLSession.shared.dataTask(with: request) { (data, response, error) in
+      guard error == nil else { return completion(nil,error) }
+
+      guard let data = data, let response = response else { return }
+      let yourdata = data
+      completion(data,nil)
+      print(data,response)
+      // handle data
+    }.resume()
+
+
+    }
+    
+    func Deneme (){
+        if let url = URL(string: "https://ec2-18-197-100-203.eu-central-1.compute.amazonaws.com:8080/provinces?userID=" + "\(UserInfo[2])") {
+            var request = URLRequest(url: url)
+            request.addValue("\(UserInfo[2])", forHTTPHeaderField: "token")
+            request.httpMethod = "GET"
+            let dataTask = URLSession.shared.dataTask(with: request) { (data: Data?, response: URLResponse?, error: Error?) in
+                //handle response here
+                print("------------------------")
+                print(response)
+            }
+            dataTask.resume()
+        }
+        
+    }
 }

@@ -8,6 +8,6 @@
 import Foundation
 
 class CityResponse: Codable{
-    var CityResponse = String()
+    var  CityResponse : [String]
 
 }
