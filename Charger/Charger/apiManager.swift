@@ -72,26 +72,46 @@ class ApiManager{
     }
     
     func getCityNames(){
-        print("------------------------------")
-        let fortniteChallengesURL = URL(string: "http://ec2-18-197-100-203.eu-central-1.compute.amazonaws.com:8080/provinces?userID=81")
-        if let unwrappedURL = fortniteChallengesURL {
-            var request = URLRequest(url: unwrappedURL)
-            request.addValue("token", forHTTPHeaderField:  "\(UserInfo[1])")
-            let dataTask = URLSession.shared.dataTask(with: request) { (data, response, error) in
-                // you should put in error handling code, too
-                if let data = data {
-                    do {
-                        let json = try JSONDecoder().decode(CityResponse.self, from: data) as CityResponse
-                        // HERE'S WHERE YOUR DATA IS
-                        print(json.CityResponse.self)
-                    } catch {
-                        print(error)
+        var registerUrl = "http://ec2-18-197-100-203.eu-central-1.compute.amazonaws.com:8080/provinces"
+        
+        let headers: HTTPHeaders = [
+            "token": "QVyFKjsCUpZtzJKfa_c4WB-8ECKndsCt",
+            "Accept": "*/*"
+        ]
+        
+        let params = ["userID": 58]
+        
+        AF.request(registerUrl, method: .get, parameters: params, encoding: URLEncoding.default, headers:headers).response{ response in //debugPrint(response)
+            switch response.result {
+                
+            case .success(let data):
+                
+                do{
+                    let json = try JSONSerialization.jsonObject(with: data!,options: [])
+                   
+                    if response.response?.statusCode == 200{
+                        
+                        print(json)
                     }
-                }
-            }
-            dataTask.resume()
-        }
+                    else{
+                       
+                        print("ELSE")
+                    }
+                   
+                }catch{
+                    print("CATCH")
 
+                }
+                
+            case .failure(let err):
+                print(err.localizedDescription)
+                print("CATCH")
+
+                
+                
+            }
+            
+        }
 }
     
     func ApiCall(completion:@escaping (_ data:Data?,_ error:Error?)->Void) {
