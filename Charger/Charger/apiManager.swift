@@ -14,9 +14,13 @@ let registerUrl = "http://ec2-18-197-100-203.eu-central-1.compute.amazonaws.com:
 
 class ApiManager{
     static let APIInstance = ApiManager()
+
     var UserInfo = [String]()
     var CityNames = [String]()
+    
+
     func callingRegisterAPI(register : login , completionHandler : @escaping (Bool)->()){
+        
         let headers: HTTPHeaders = [.contentType("application/json")]
         
         AF.request(registerUrl, method: .post, parameters: register, encoder: JSONParameterEncoder.default, headers:headers).response{ response in //debugPrint(response)
@@ -73,16 +77,16 @@ class ApiManager{
     }
     
     func getCityNames(){
-        var registerUrl = "http://ec2-18-197-100-203.eu-central-1.compute.amazonaws.com:8080/provinces"
+        let registerUrl = "http://ec2-18-197-100-203.eu-central-1.compute.amazonaws.com:8080/provinces"
         
         let headers: HTTPHeaders = [
-            "token": "QVyFKjsCUpZtzJKfa_c4WB-8ECKndsCt",
+            "token": UserInfo[1],
             "Accept": "*/*"
         ]
         
-        let params = ["userID": 58]
+        let params = ["userID": UserInfo[2]]
         
-        AF.request(registerUrl, method: .get, parameters: params, encoding: URLEncoding.default, headers:headers).response{ response in //debugPrint(response)
+        AF.request(registerUrl, method: .get, parameters: params, encoding: URLEncoding.default, headers:headers).response{ [self] response in //debugPrint(response)
             switch response.result {
                 
             case .success(let data):
@@ -94,6 +98,8 @@ class ApiManager{
                         
                         if let swiftArray = json as! NSArray as? [String] {
                             self.CityNames = swiftArray
+                            
+                            //print(self.CityNames.count)
                         }
                     }
                     else{
@@ -113,35 +119,58 @@ class ApiManager{
                 
                 
             }
+           
             
         }
 }
     
-    func ApiCall(completion:@escaping (_ data:Data?,_ error:Error?)->Void) {
+    func Logout(){
+        let Url = "http://ec2-18-197-100-203.eu-central-1.compute.amazonaws.com:8080/auth/logout"
+        var loginUrl = URL(string: Url)!
+        let headers: HTTPHeaders = [
+            "token": UserInfo[1],
+            "Accept": "*/*"
+        ]
+        let params = ["/": UserInfo[2]]
+        loginUrl.appendPathComponent("\(UserInfo[2])")
+        print(loginUrl)
 
-       let url = URL(string: "ec2-18-197-100-203.eu-central-1.compute.amazonaws.com:8080/provinces?userID=" + "\(UserInfo[2])")!
+        AF.request(loginUrl, method: .post, parameters: params, encoding: URLEncoding.default, headers:headers).response{ [self] response in //debugPrint(response)
+            switch response.result {
+                
+            case .success(let data):
+                
+                do{
+                   
+                    if response.response?.statusCode == 200{
+                       
+                      print("logout")
+                    }
+                    else{
+                        print(response.response?.statusCode as Any)
+                        print("ELSE")
+                    }
+                   
+                }catch{
+                    print("CATCH")
 
-       var request = URLRequest(url: url)
-       request.allHTTPHeaderFields = [
-                "content-type": "application/json",
-                "token": "\(UserInfo[1])",
-                "cache-control": "no-cache",
-                ]
-    //// you can write "Bearer" if you are requesting url as a user from server like its only use for you
-    ////if not only for you but for a group of users or for an app you shold only wirte the token string
+                }
+                
+            case .failure(let err):
+                print(err.localizedDescription)
+                print("CATCH")
 
+                
+                
+            }
 
-    URLSession.shared.dataTask(with: request) { (data, response, error) in
-      guard error == nil else { return completion(nil,error) }
-
-      guard let data = data, let response = response else { return }
-      let yourdata = data
-      completion(data,nil)
-      print(data,response)
-      // handle data
-    }.resume()
-
-
+           
+            
+        }
+        
+        
+        
     }
+ 
    
 }

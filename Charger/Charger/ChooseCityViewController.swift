@@ -14,19 +14,16 @@ class ChooseCityViewController: UIViewController , UITableViewDataSource, UITabl
     @IBOutlet weak var Background: UIView!
     @IBOutlet var chooseCityBackground: TableViewCell!
     @IBOutlet weak var TableView: UITableView!
+    var CityNamesDisplay = [String]()
     
     var CityCells = [TableViewCell]()
     
+  
     override func viewDidLoad() {
-        
-        ApiManager.APIInstance.getCityNames()
-
-
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
+
+
     }
-    
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -36,15 +33,24 @@ class ChooseCityViewController: UIViewController , UITableViewDataSource, UITabl
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
         {
             let tableViewCell = tableView.dequeueReusableCell(withIdentifier: "CityTableCellId") as! TableViewCell
+            
+            
             tableViewCell.cityNameLabel.textColor = Theme.textColor
             chooseCityBackground.backgroundColor = Theme.backgroundColor
             Background.backgroundColor = Theme.backgroundColor
             
+            print(ApiManager.APIInstance.CityNames.count)
+            let cityname = ApiManager.APIInstance.CityNames[indexPath.row]
+            tableViewCell.cityNameLabel.text = cityname
+
+            CityCells.append(tableViewCell)
             return tableViewCell
         }
         
    
     }
+
+
 
     /*
     // MARK: - Navigation

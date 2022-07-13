@@ -26,6 +26,12 @@ class ProfilePageViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func Logout(_ sender: Any) {
+        ApiManager.APIInstance.Logout()
+        logOutView()
+       
+        
+    }
     func ProfilePageView(){
         ProfilePageBakgraund.backgroundColor = Theme.backgroundColor
         LogoutButton.setImage(UIImage(named: "Logout Button"), for: .normal)
@@ -35,6 +41,18 @@ class ProfilePageViewController: UIViewController {
         ID.text = (ApiManager.APIInstance.UserInfo[2] ) as? String
        
         
+    }
+    
+    func logOutView(){
+        let alert = UIAlertController(title: "çıkış yap", message: "uygulamadan cıkış yapmak üzeresiniz", preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "OK", style: .default) { (action) -> Void in
+            self.Email.text = " "
+            self.ID.text = " "
+            
+        }
+        alert.addAction(action)
+        present(alert , animated: true)
     }
 
     /*

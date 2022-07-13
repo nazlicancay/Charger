@@ -27,10 +27,15 @@ class AppointmentViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func CrateAppointment(_ sender: Any) {
+        
+       // ApiManager.APIInstance.getCityNames()
+
+    }
     func AppointmentView(){
         CreateAppointmentButton.setImage(UIImage(named: "CreateAppointment"), for: .normal)
         
-        ProfileButton.setImage(UIImage(named: "ProfileBadge"), for: .normal)
+        ProfileButton.setImage(UIImage(named: "Users"), for: .normal)
         
         AppointmentPageView.backgroundColor = Theme.backgroundColor
         

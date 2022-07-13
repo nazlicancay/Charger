@@ -41,6 +41,7 @@ class ViewController: UIViewController {
     
     @IBAction func Register(_ sender: UIButton) {
         Register()
+       
     }
     
     
@@ -52,6 +53,7 @@ class ViewController: UIViewController {
             if isSuccess {
                 
                 debugPrint("register succeesfully")
+                ApiManager.APIInstance.getCityNames()
                 
             }
             else{
