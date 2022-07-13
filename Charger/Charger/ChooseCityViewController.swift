@@ -39,7 +39,6 @@ class ChooseCityViewController: UIViewController , UITableViewDataSource, UITabl
             chooseCityBackground.backgroundColor = Theme.backgroundColor
             Background.backgroundColor = Theme.backgroundColor
             
-            print(ApiManager.APIInstance.CityNames.count)
             let cityname = ApiManager.APIInstance.CityNames[indexPath.row]
             tableViewCell.cityNameLabel.text = cityname
 

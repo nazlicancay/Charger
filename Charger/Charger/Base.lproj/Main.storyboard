@@ -220,7 +220,7 @@
                             <constraint firstItem="rK6-a4-5r7" firstAttribute="leading" secondItem="4Bj-2Q-0ti" secondAttribute="leading" id="oOy-8x-69F"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Şehir Seçin" id="5if-jI-N82"/>
+                    <navigationItem key="navigationItem" title="Şehir Seçin" leftItemsSupplementBackButton="YES" id="5if-jI-N82"/>
                     <connections>
                         <outlet property="Background" destination="rK6-a4-5r7" id="CtS-nv-zi4"/>
                         <outlet property="TableView" destination="uFa-lS-mgV" id="3x3-w7-aZF"/>
