@@ -15,6 +15,7 @@ let registerUrl = "http://ec2-18-197-100-203.eu-central-1.compute.amazonaws.com:
 class ApiManager{
     static let APIInstance = ApiManager()
     var UserInfo = [String]()
+    var CityNames = [String]()
     func callingRegisterAPI(register : login , completionHandler : @escaping (Bool)->()){
         let headers: HTTPHeaders = [.contentType("application/json")]
         
@@ -91,7 +92,9 @@ class ApiManager{
                    
                     if response.response?.statusCode == 200{
                         
-                        print(json)
+                        if let swiftArray = json as! NSArray as? [String] {
+                            self.CityNames = swiftArray
+                        }
                     }
                     else{
                        
@@ -140,19 +143,5 @@ class ApiManager{
 
 
     }
-    
-    func Deneme (){
-        if let url = URL(string: "https://ec2-18-197-100-203.eu-central-1.compute.amazonaws.com:8080/provinces?userID=" + "\(UserInfo[2])") {
-            var request = URLRequest(url: url)
-            request.addValue("\(UserInfo[2])", forHTTPHeaderField: "token")
-            request.httpMethod = "GET"
-            let dataTask = URLSession.shared.dataTask(with: request) { (data: Data?, response: URLResponse?, error: Error?) in
-                //handle response here
-                print("------------------------")
-                print(response)
-            }
-            dataTask.resume()
-        }
-        
-    }
+   
 }

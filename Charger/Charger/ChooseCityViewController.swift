@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class ChooseCityViewController: UIViewController , UITableViewDataSource, UITableViewDelegate {
     
@@ -13,14 +14,17 @@ class ChooseCityViewController: UIViewController , UITableViewDataSource, UITabl
     @IBOutlet weak var Background: UIView!
     @IBOutlet var chooseCityBackground: TableViewCell!
     @IBOutlet weak var TableView: UITableView!
-
+    
+    var CityCells = [TableViewCell]()
+    
     override func viewDidLoad() {
+        
         ApiManager.APIInstance.getCityNames()
-      
+
 
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        
     }
     
     
@@ -32,10 +36,6 @@ class ChooseCityViewController: UIViewController , UITableViewDataSource, UITabl
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
         {
             let tableViewCell = tableView.dequeueReusableCell(withIdentifier: "CityTableCellId") as! TableViewCell
-            
-           
-
-            tableViewCell.cityNameLabel.text = "deneme"
             tableViewCell.cityNameLabel.textColor = Theme.textColor
             chooseCityBackground.backgroundColor = Theme.backgroundColor
             Background.backgroundColor = Theme.backgroundColor
@@ -43,7 +43,8 @@ class ChooseCityViewController: UIViewController , UITableViewDataSource, UITabl
             return tableViewCell
         }
         
-    
+   
+    }
 
     /*
     // MARK: - Navigation
@@ -55,4 +56,4 @@ class ChooseCityViewController: UIViewController , UITableViewDataSource, UITabl
     }
     */
 
-}
+
