@@ -86,7 +86,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="veB-PQ-EY7">
-                                <rect key="frame" x="-8" y="282.5" width="430" height="396"/>
+                                <rect key="frame" x="-8" y="278.5" width="430" height="396"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NoAppointmentBagde" translatesAutoresizingMaskIntoConstraints="NO" id="XO0-vD-O69">
                                         <rect key="frame" x="90" y="0.0" width="250" height="250"/>
@@ -225,11 +225,28 @@
                         <outlet property="Background" destination="rK6-a4-5r7" id="CtS-nv-zi4"/>
                         <outlet property="TableView" destination="uFa-lS-mgV" id="3x3-w7-aZF"/>
                         <outlet property="chooseCityBackground" destination="KK6-zp-BFp" id="6DI-4s-Cpr"/>
+                        <segue destination="qsm-Ua-X96" kind="show" identifier="ChooseStation" id="izz-U6-fZO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RDl-yj-Nhp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2721.739130434783" y="510.9375"/>
+        </scene>
+        <!--Choose City View Controller-->
+        <scene sceneID="lO3-bP-Yfj">
+            <objects>
+                <viewController id="qsm-Ua-X96" customClass="ChooseCityViewController" customModule="Charger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dPW-KC-rJp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="tYf-If-qTN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZtZ-c7-yts"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gLv-qC-xZE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3930" y="511"/>
         </scene>
         <!--Profil-->
         <scene sceneID="NOk-YK-A4a">

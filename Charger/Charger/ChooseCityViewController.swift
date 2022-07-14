@@ -101,6 +101,24 @@ class ChooseCityViewController: UIViewController , UITableViewDataSource, UITabl
         }
         TableView.reloadData()
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+        {
+            self.performSegue(withIdentifier: "ChooseStation", sender: self)
+            ApiManager.APIInstance.GetStationInfo()
+        }
+        
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+        {
+            if(segue.identifier == "ChooseStation")
+            {
+                let indexPath = self.TableView.indexPathForSelectedRow!
+                
+                let tableViewDetail = segue.destination as? ChooseStationViewController
+                
+                self.TableView.deselectRow(at: indexPath, animated: true)
+            }
+        }
         
    
     }

@@ -9,23 +9,44 @@ import UIKit
 import Lottie
 import CoreLocation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController ,CLLocationManagerDelegate{
 
     @IBOutlet var ViewUI: UIView!
-    let locationManager = CLLocationManager()
     
     @IBOutlet weak var introTextGray: UILabel!
     @IBOutlet weak var EmailInput: UITextField!
+    
+    private var locationManager:CLLocationManager?
     
     
     override func viewDidLoad() {
         RegisterPageColors()
         super.viewDidLoad()
-        locationManager.requestWhenInUseAuthorization()
+       getUserLocation()
+        
 
        
     }
+    
    
+    func getUserLocation() {
+        
+        locationManager = CLLocationManager()
+        locationManager?.requestAlwaysAuthorization()
+        locationManager?.startUpdatingLocation()
+        locationManager?.delegate = self
+
+        }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.last {
+            ApiManager.APIInstance.UserLatitude = (String (location.coordinate.latitude))
+            ApiManager.APIInstance.UserLongitude = (String(location.coordinate.longitude))
+            
+           
+            
+        }
+    }
     
     func RegisterPageColors(){
         EmailInput.attributedPlaceholder = NSAttributedString(string: "Email adresi giriniz",

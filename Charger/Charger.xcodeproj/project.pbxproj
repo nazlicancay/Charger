@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6224591128789299008E9D7D /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6224591028789299008E9D7D /* TableViewCell.swift */; };
 		622459132878C4B2008E9D7D /* CityResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622459122878C4B2008E9D7D /* CityResponseModel.swift */; };
+		624574662880A55A00DF3195 /* ChooseStationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624574652880A55A00DF3195 /* ChooseStationViewController.swift */; };
 		62756BDE287307D600686DD6 /* AppointmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62756BDD287307D600686DD6 /* AppointmentViewController.swift */; };
 		629D1FDA287730B600E8F641 /* ChooseCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D1FD9287730B600E8F641 /* ChooseCityViewController.swift */; };
 		62AF8944286C591700B0DDC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AF8943286C591700B0DDC7 /* AppDelegate.swift */; };
@@ -56,6 +57,7 @@
 		20AD6294E646B0A34FE82330 /* Pods-Charger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Charger.release.xcconfig"; path = "Target Support Files/Pods-Charger/Pods-Charger.release.xcconfig"; sourceTree = "<group>"; };
 		6224591028789299008E9D7D /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		622459122878C4B2008E9D7D /* CityResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityResponseModel.swift; sourceTree = "<group>"; };
+		624574652880A55A00DF3195 /* ChooseStationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseStationViewController.swift; sourceTree = "<group>"; };
 		62756BDD287307D600686DD6 /* AppointmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentViewController.swift; sourceTree = "<group>"; };
 		629D1FD9287730B600E8F641 /* ChooseCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCityViewController.swift; sourceTree = "<group>"; };
 		62AF8940286C591700B0DDC7 /* Charger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Charger.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +111,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		624574642880A53000DF3195 /* ChoseStation */ = {
+			isa = PBXGroup;
+			children = (
+				624574652880A55A00DF3195 /* ChooseStationViewController.swift */,
+			);
+			name = ChoseStation;
+			sourceTree = "<group>";
+		};
 		629D1FD82877309D00E8F641 /* ChooseCity */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,10 +154,11 @@
 		62AF8942286C591700B0DDC7 /* Charger */ = {
 			isa = PBXGroup;
 			children = (
+				624574642880A53000DF3195 /* ChoseStation */,
 				629D1FD82877309D00E8F641 /* ChooseCity */,
 				62FC679C28736B7900906323 /* ProfilePage */,
 				62E82E9B2871FC830095686C /* AppointmentPage */,
-				62E2797D28708F81005FF57E /* ApiManager */,
+				62E2797D28708F81005FF57E /* Managers */,
 				62E2797A28708D28005FF57E /* Register */,
 				62AF8974286C59D500B0DDC7 /* Modules */,
 				62AF8975286C5A0A00B0DDC7 /* Assets */,
@@ -221,12 +232,12 @@
 			name = Register;
 			sourceTree = "<group>";
 		};
-		62E2797D28708F81005FF57E /* ApiManager */ = {
+		62E2797D28708F81005FF57E /* Managers */ = {
 			isa = PBXGroup;
 			children = (
 				62E2797E28708F96005FF57E /* apiManager.swift */,
 			);
-			name = ApiManager;
+			name = Managers;
 			sourceTree = "<group>";
 		};
 		62E82E9B2871FC830095686C /* AppointmentPage */ = {
@@ -438,6 +449,7 @@
 				629D1FDA287730B600E8F641 /* ChooseCityViewController.swift in Sources */,
 				622459132878C4B2008E9D7D /* CityResponseModel.swift in Sources */,
 				62E2797F28708F96005FF57E /* apiManager.swift in Sources */,
+				624574662880A55A00DF3195 /* ChooseStationViewController.swift in Sources */,
 				6224591128789299008E9D7D /* TableViewCell.swift in Sources */,
 				62AF897A286C6FA400B0DDC7 /* Theme.swift in Sources */,
 				62AF8944286C591700B0DDC7 /* AppDelegate.swift in Sources */,

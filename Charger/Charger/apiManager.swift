@@ -17,6 +17,9 @@ class ApiManager{
 
     var UserInfo = [String]()
     var CityNames = [String]()
+    var UserLatitude = String()
+    var UserLongitude = String()
+
     
 
     func callingRegisterAPI(register : login , completionHandler : @escaping (Bool)->()){
@@ -168,6 +171,58 @@ class ApiManager{
             
         }
         
+        
+        
+    }
+    
+    func GetStationInfo(){
+        let registerUrl = "http://ec2-18-197-100-203.eu-central-1.compute.amazonaws.com:8080/stations"
+        
+        let headers: HTTPHeaders = [
+            "token": UserInfo[1],
+            "Accept": "*/*"
+        ]
+        
+        let params = [
+            "userID": UserInfo[2],
+            "userLatitude" : UserLatitude,
+            "userLongitude" : UserLongitude
+        ]
+        
+        print(registerUrl)
+        AF.request(registerUrl, method: .get, parameters: params, encoding: URLEncoding.default, headers:headers).response{ [self] response in //debugPrint(response)
+            switch response.result {
+                
+            case .success(let data):
+                
+                do{
+                    let json = try JSONSerialization.jsonObject(with: data!,options: [])
+                   
+                    if response.response?.statusCode == 200{
+                        
+                       print(json)
+                        
+                    }
+                    else{
+                       
+                        print("ELSE")
+                    }
+                   
+                }catch{
+                    print("CATCH")
+
+                }
+                
+            case .failure(let err):
+                print(err.localizedDescription)
+                print("CATCH")
+
+                
+                
+            }
+           
+            
+        }
         
         
     }
