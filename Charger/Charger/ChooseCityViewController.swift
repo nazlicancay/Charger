@@ -8,7 +8,9 @@
 import UIKit
 import SwiftUI
 
-class ChooseCityViewController: UIViewController , UITableViewDataSource, UITableViewDelegate {
+class ChooseCityViewController: UIViewController , UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UISearchResultsUpdating {
+    
+    
     
 
     @IBOutlet weak var Background: UIView!
@@ -17,16 +19,36 @@ class ChooseCityViewController: UIViewController , UITableViewDataSource, UITabl
     var CityNamesDisplay = [String]()
     
     var CityCells = [TableViewCell]()
+    let searchController = UISearchController()
     
+    var filteredCityNames = [String]()
   
     override func viewDidLoad() {
         super.viewDidLoad()
+        initSearchController()
 
 
     }
-    
+    func initSearchController(){
+        searchController.loadViewIfNeeded()
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.enablesReturnKeyAutomatically = false
+        searchController.searchBar.returnKeyType = UIReturnKeyType.done
+        definesPresentationContext = true
+        
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
+        searchController.searchBar.scopeButtonTitles = ["All" , "Ankara" , "İzmir" , "İstanbul"]
+        
+        searchController.searchBar.delegate = self
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        if(searchController.isActive){
+            return filteredCityNames.count
+        }
         return 81
     }
     
@@ -38,13 +60,47 @@ class ChooseCityViewController: UIViewController , UITableViewDataSource, UITabl
             tableViewCell.cityNameLabel.textColor = Theme.textColor
             chooseCityBackground.backgroundColor = Theme.backgroundColor
             Background.backgroundColor = Theme.backgroundColor
-            
-            let cityname = ApiManager.APIInstance.CityNames[indexPath.row]
-            tableViewCell.cityNameLabel.text = cityname
 
-            CityCells.append(tableViewCell)
+            var cityname = tableViewCell
+            
+            if(searchController.isActive){
+                
+                cityname.cityNameLabel.text = filteredCityNames[indexPath.row]
+            }
+            else{
+                cityname.cityNameLabel.text = ApiManager.APIInstance.CityNames[indexPath.row]
+            }
+            
+
             return tableViewCell
         }
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        let searchBar = searchController.searchBar
+        let scopeButton = searchBar.scopeButtonTitles![searchBar.selectedScopeButtonIndex]
+        let searchText = searchBar.text!
+        
+        filterForSearchTextAndScopeButton(searchText: searchText , scopeButton: scopeButton)
+        
+    }
+    func filterForSearchTextAndScopeButton(searchText : String , scopeButton : String = "All"){
+        filteredCityNames = ApiManager.APIInstance.CityNames.filter{
+            city in
+            let scopeMatch = (scopeButton == "All" || city.lowercased().contains(scopeButton.lowercased()))
+            
+            if(searchController.searchBar.text != "")
+            {
+                let searcbarTextMatch = city.lowercased().contains(searchText.lowercased())
+                
+                return scopeMatch && searcbarTextMatch
+            }
+            else
+            {
+                return scopeMatch
+            }
+        }
+        TableView.reloadData()
+    }
         
    
     }
