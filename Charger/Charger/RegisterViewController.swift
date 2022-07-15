@@ -23,10 +23,13 @@ class ViewController: UIViewController ,CLLocationManagerDelegate{
         RegisterPageColors()
         super.viewDidLoad()
        getUserLocation()
+        UIViewController()
         
 
        
     }
+    
+    
     
    
     func getUserLocation() {
@@ -85,6 +88,20 @@ class ViewController: UIViewController ,CLLocationManagerDelegate{
 
             
         }
+    }
+    
+    
+}
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 }
     

@@ -110,7 +110,7 @@ class ChooseCityViewController: UIViewController , UITableViewDataSource, UITabl
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
         {
             self.performSegue(withIdentifier: "ChooseStation", sender: self)
-            ApiManager.APIInstance.GetStationInfo()
+           // ApiManager.APIInstance.GetStationInfo()
         }
         
         override func prepare(for segue: UIStoryboardSegue, sender: Any?)

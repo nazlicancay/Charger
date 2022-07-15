@@ -20,6 +20,9 @@ class ApiManager{
     var UserLatitude = String()
     var UserLongitude = String()
 
+    var StationNames = [String]()
+    var StationDistance = [Double]()
+    var StationSocketCount = [Int]()
     
 
     func callingRegisterAPI(register : login , completionHandler : @escaping (Bool)->()){
@@ -168,9 +171,7 @@ class ApiManager{
             }
 
            
-            
         }
-        
         
         
     }
@@ -200,7 +201,7 @@ class ApiManager{
                    
                     if response.response?.statusCode == 200{
                         
-                        GetStationInfo(data: data!)
+                        GetStationInfoDetails(data: data!)
                         
                     }
                     else{
@@ -227,11 +228,18 @@ class ApiManager{
         
     }
     
-    func GetStationInfo(data  : Data ){
+    func GetStationInfoDetails(data  : Data ){
         
-        let DecodedData = try! JSONDecoder().decode([station].self, from: data)
-        print(DecodedData[0].geoLocation?.province)
-
+        let DecodedData = try! JSONDecoder().decode([Station].self, from: data)
+        
+        for i in 0...2{
+            StationNames.append(DecodedData[i].stationName!)
+            StationDistance.append(DecodedData[i].distanceInKM!)
+            StationSocketCount.append(DecodedData[i].socketCount!)
+            
+        }
+        print("api manager ",StationNames.count)
+        
            
         }
  

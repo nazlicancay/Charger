@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct station : Decodable {
+struct Station : Decodable {
     
     var occupiedSocketCount : Int?
     var sockets : [sokets]?
@@ -16,7 +16,7 @@ struct station : Decodable {
     var services : [String]
     var stationCode : String?
     var distanceInKM : Double?
-    var staionName : String?
+    var stationName : String?
     var geoLocation : GeoLocation?
 }
 

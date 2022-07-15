@@ -29,8 +29,7 @@ class AppointmentViewController: UIViewController {
     
     @IBAction func CrateAppointment(_ sender: Any) {
         
-       // ApiManager.APIInstance.getCityNames()
-
+        ApiManager.APIInstance.GetStationInfo()
     }
     func AppointmentView(){
         CreateAppointmentButton.setImage(UIImage(named: "CreateAppointment"), for: .normal)

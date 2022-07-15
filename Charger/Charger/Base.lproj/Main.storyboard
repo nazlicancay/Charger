@@ -235,19 +235,13 @@
         <!--İstasyon Seçin-->
         <scene sceneID="lO3-bP-Yfj">
             <objects>
-                <viewController id="qsm-Ua-X96" customClass="ChooseCityViewController" customModule="Charger" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="qsm-Ua-X96" customClass="ChooseStationViewController" customModule="Charger" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dPW-KC-rJp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;&quot; Şehri için 3 sonuç görüntüleniyor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pm3-u1-eiM">
-                                <rect key="frame" x="2" y="156.5" width="410" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="7Op-tG-aVk">
-                                <rect key="frame" x="80" y="252" width="254.5" height="211"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="7Op-tG-aVk">
+                                <rect key="frame" x="30" y="291" width="354" height="141"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="ztL-RX-IZb">
                                         <rect key="frame" x="0.0" y="0.0" width="244.5" height="60"/>
@@ -264,7 +258,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Umb-4x-IVN">
-                                        <rect key="frame" x="0.0" y="115" width="254.5" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="80" width="254.5" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hizmet saatler : 24 saat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRq-0Q-7le">
                                                 <rect key="frame" x="0.0" y="0.0" width="180" height="20.5"/>
@@ -281,7 +275,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lLA-qs-opF">
-                                        <rect key="frame" x="0.0" y="190.5" width="181" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="120.5" width="181" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="uygun Soket sayısı:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AyB-dv-PJW">
                                                 <rect key="frame" x="0.0" y="0.0" width="145.5" height="20.5"/>
@@ -299,22 +293,156 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="g4V-JI-73O">
+                                <rect key="frame" x="30" y="479" width="354" height="141"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="DG8-oY-soo">
+                                        <rect key="frame" x="0.0" y="0.0" width="244.5" height="60"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="y5J-F4-uMJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="65" height="60"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kanyon avm istanbul" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yal-T6-wI7">
+                                                <rect key="frame" x="88" y="20" width="156.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="bnw-7b-QES">
+                                        <rect key="frame" x="0.0" y="80" width="254.5" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hizmet saatler : 24 saat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ig0-05-ooU">
+                                                <rect key="frame" x="0.0" y="0.0" width="180" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.5km" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QAl-an-5Rg">
+                                                <rect key="frame" x="210" y="0.0" width="44.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5J0-Bd-uff">
+                                        <rect key="frame" x="0.0" y="120.5" width="181" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="uygun Soket sayısı:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKe-gj-LJf">
+                                                <rect key="frame" x="0.0" y="0.0" width="145.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3/3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1JA-dI-IYz">
+                                                <rect key="frame" x="155.5" y="0.0" width="25.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="aSS-XZ-PWs">
+                                <rect key="frame" x="30" y="672" width="354" height="141"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="6dJ-hm-mQY">
+                                        <rect key="frame" x="0.0" y="0.0" width="244.5" height="60"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="veK-Bj-g9M">
+                                                <rect key="frame" x="0.0" y="0.0" width="65" height="60"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kanyon avm istanbul" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yep-Df-EFC">
+                                                <rect key="frame" x="88" y="20" width="156.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="fZS-aF-Neo">
+                                        <rect key="frame" x="0.0" y="80" width="254.5" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hizmet saatler : 24 saat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQ6-kN-Cky">
+                                                <rect key="frame" x="0.0" y="0.0" width="180" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.5km" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Axj-cD-Q5K">
+                                                <rect key="frame" x="210" y="0.0" width="44.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rkE-1W-Dfj">
+                                        <rect key="frame" x="0.0" y="120.5" width="181" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="uygun Soket sayısı:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKi-rM-eYN">
+                                                <rect key="frame" x="0.0" y="0.0" width="145.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3/3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EF6-Ei-OAk">
+                                                <rect key="frame" x="155.5" y="0.0" width="25.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="&quot;&quot; Şehri için 3 sonuç görüntüleniyor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pm3-u1-eiM">
+                                <rect key="frame" x="0.0" y="193" width="410" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tYf-If-qTN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="tYf-If-qTN" firstAttribute="bottom" secondItem="7Op-tG-aVk" secondAttribute="bottom" constant="350" id="2UL-Rv-vyk"/>
+                            <constraint firstItem="aSS-XZ-PWs" firstAttribute="bottom" secondItem="tYf-If-qTN" secondAttribute="bottom" id="0TZ-M2-5Je"/>
+                            <constraint firstItem="tYf-If-qTN" firstAttribute="bottom" secondItem="7Op-tG-aVk" secondAttribute="bottom" constant="381" id="2UL-Rv-vyk"/>
+                            <constraint firstItem="tYf-If-qTN" firstAttribute="trailing" secondItem="g4V-JI-73O" secondAttribute="trailing" constant="30" id="3bn-28-Tp8"/>
+                            <constraint firstItem="aSS-XZ-PWs" firstAttribute="leading" secondItem="tYf-If-qTN" secondAttribute="leading" constant="30" id="COE-VG-1M5"/>
                             <constraint firstItem="7Op-tG-aVk" firstAttribute="centerX" secondItem="tYf-If-qTN" secondAttribute="centerX" id="Fjb-D8-RQG"/>
-                            <constraint firstItem="7Op-tG-aVk" firstAttribute="top" secondItem="Pm3-u1-eiM" secondAttribute="bottom" constant="75" id="Gyt-uA-roZ"/>
-                            <constraint firstItem="Pm3-u1-eiM" firstAttribute="leading" secondItem="tYf-If-qTN" secondAttribute="leading" constant="2" id="U9Q-Hx-yZs"/>
-                            <constraint firstItem="tYf-If-qTN" firstAttribute="trailing" secondItem="Pm3-u1-eiM" secondAttribute="trailing" constant="2" id="sjJ-Dc-wIg"/>
+                            <constraint firstItem="7Op-tG-aVk" firstAttribute="top" secondItem="Pm3-u1-eiM" secondAttribute="bottom" constant="53.5" id="Gyt-uA-roZ"/>
+                            <constraint firstItem="g4V-JI-73O" firstAttribute="top" secondItem="7Op-tG-aVk" secondAttribute="bottom" constant="47" id="IQk-6J-Gt2"/>
+                            <constraint firstItem="aSS-XZ-PWs" firstAttribute="top" secondItem="g4V-JI-73O" secondAttribute="bottom" constant="52" id="J0Z-dZ-o19"/>
+                            <constraint firstItem="7Op-tG-aVk" firstAttribute="leading" secondItem="tYf-If-qTN" secondAttribute="leading" constant="30" id="Mxe-n0-Jpf"/>
+                            <constraint firstItem="Pm3-u1-eiM" firstAttribute="leading" secondItem="tYf-If-qTN" secondAttribute="leading" id="U9Q-Hx-yZs"/>
+                            <constraint firstItem="tYf-If-qTN" firstAttribute="trailing" secondItem="aSS-XZ-PWs" secondAttribute="trailing" constant="30" id="e0X-Ge-iPP"/>
+                            <constraint firstItem="tYf-If-qTN" firstAttribute="bottom" secondItem="g4V-JI-73O" secondAttribute="bottom" constant="193" id="gdF-9j-Rug"/>
+                            <constraint firstItem="tYf-If-qTN" firstAttribute="trailing" secondItem="7Op-tG-aVk" secondAttribute="trailing" constant="30" id="s0n-pa-bVw"/>
+                            <constraint firstItem="tYf-If-qTN" firstAttribute="trailing" secondItem="Pm3-u1-eiM" secondAttribute="trailing" constant="4" id="sjJ-Dc-wIg"/>
+                            <constraint firstItem="g4V-JI-73O" firstAttribute="leading" secondItem="tYf-If-qTN" secondAttribute="leading" constant="30" id="svY-18-qlZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="İstasyon Seçin" id="ZtZ-c7-yts"/>
+                    <connections>
+                        <outlet property="Background" destination="dPW-KC-rJp" id="Hnw-vY-fQP"/>
+                        <outlet property="DistanceLabel1" destination="UJ7-OT-RAT" id="p6I-bg-VSp"/>
+                        <outlet property="DistanceLabel2" destination="QAl-an-5Rg" id="Q0T-vQ-Mid"/>
+                        <outlet property="DistanceLabel3" destination="Axj-cD-Q5K" id="xvb-gh-FwM"/>
+                        <outlet property="NumberOfSockets1" destination="DNM-Mr-106" id="NqF-Fe-fsL"/>
+                        <outlet property="NumberOfSockets2" destination="1JA-dI-IYz" id="mFE-8J-0fQ"/>
+                        <outlet property="NumberOfSockets3" destination="EF6-Ei-OAk" id="p6k-09-VNd"/>
+                        <outlet property="ProvinceLabel1" destination="yqa-n2-2fv" id="Ppo-ut-k4H"/>
+                        <outlet property="ProvinceLabel2" destination="yal-T6-wI7" id="nA6-72-TxP"/>
+                        <outlet property="ProvinceLabel3" destination="yep-Df-EFC" id="j5H-Kv-ErE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gLv-qC-xZE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3928.985507246377" y="510.9375"/>
+            <point key="canvasLocation" x="3683" y="511"/>
         </scene>
         <!--Profil-->
         <scene sceneID="NOk-YK-A4a">
