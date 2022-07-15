@@ -199,9 +199,8 @@ class ApiManager{
                     let json = try JSONSerialization.jsonObject(with: data!,options: [])
                    
                     if response.response?.statusCode == 200{
-                        print(json)
-                        GetStationInfo(data: data!)
-                       
+                        
+                       print(json)
                         
                     }
                     else{
@@ -226,14 +225,6 @@ class ApiManager{
         }
         
         
-    }
-    
-    func GetStationInfo(data  : Data ){
-
-        let DecodedData = try! JSONDecoder().decode([station].self, from: data)
-        print(station.self)
-
-       
     }
  
    

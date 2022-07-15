@@ -25,11 +25,6 @@ class ChooseCityViewController: UIViewController , UITableViewDataSource, UITabl
   
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        searchController.searchBar.searchTextField.backgroundColor = Theme.backgroundColor
-        searchController.searchBar.layer.backgroundColor = Theme.backgroundColor?.cgColor
-        searchController.searchBar.searchTextField.layer.borderWidth = 1
-        searchController.searchBar.searchTextField.layer.borderColor = Theme.filterColor?.cgColor
         initSearchController()
 
 
@@ -41,8 +36,6 @@ class ChooseCityViewController: UIViewController , UITableViewDataSource, UITabl
         searchController.searchBar.enablesReturnKeyAutomatically = false
         searchController.searchBar.returnKeyType = UIReturnKeyType.done
         definesPresentationContext = true
-        
-
         
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false

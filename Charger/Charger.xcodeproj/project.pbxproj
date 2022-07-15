@@ -10,7 +10,6 @@
 		6224591128789299008E9D7D /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6224591028789299008E9D7D /* TableViewCell.swift */; };
 		622459132878C4B2008E9D7D /* CityResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622459122878C4B2008E9D7D /* CityResponseModel.swift */; };
 		624574662880A55A00DF3195 /* ChooseStationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624574652880A55A00DF3195 /* ChooseStationViewController.swift */; };
-		62603ACC28818F5A00D764DA /* StationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62603ACB28818F5A00D764DA /* StationModel.swift */; };
 		62756BDE287307D600686DD6 /* AppointmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62756BDD287307D600686DD6 /* AppointmentViewController.swift */; };
 		629D1FDA287730B600E8F641 /* ChooseCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D1FD9287730B600E8F641 /* ChooseCityViewController.swift */; };
 		62AF8944286C591700B0DDC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AF8943286C591700B0DDC7 /* AppDelegate.swift */; };
@@ -59,7 +58,6 @@
 		6224591028789299008E9D7D /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		622459122878C4B2008E9D7D /* CityResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityResponseModel.swift; sourceTree = "<group>"; };
 		624574652880A55A00DF3195 /* ChooseStationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseStationViewController.swift; sourceTree = "<group>"; };
-		62603ACB28818F5A00D764DA /* StationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationModel.swift; sourceTree = "<group>"; };
 		62756BDD287307D600686DD6 /* AppointmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentViewController.swift; sourceTree = "<group>"; };
 		629D1FD9287730B600E8F641 /* ChooseCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCityViewController.swift; sourceTree = "<group>"; };
 		62AF8940286C591700B0DDC7 /* Charger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Charger.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,7 +115,6 @@
 			isa = PBXGroup;
 			children = (
 				624574652880A55A00DF3195 /* ChooseStationViewController.swift */,
-				62603ACB28818F5A00D764DA /* StationModel.swift */,
 			);
 			name = ChoseStation;
 			sourceTree = "<group>";
@@ -457,7 +454,6 @@
 				62AF897A286C6FA400B0DDC7 /* Theme.swift in Sources */,
 				62AF8944286C591700B0DDC7 /* AppDelegate.swift in Sources */,
 				62AF8946286C591700B0DDC7 /* SceneDelegate.swift in Sources */,
-				62603ACC28818F5A00D764DA /* StationModel.swift in Sources */,
 				62FC679E28736B9F00906323 /* ProfilePageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

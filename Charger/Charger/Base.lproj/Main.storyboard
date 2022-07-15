@@ -86,7 +86,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="veB-PQ-EY7">
-                                <rect key="frame" x="-8" y="282.5" width="430" height="396"/>
+                                <rect key="frame" x="-8" y="278.5" width="430" height="396"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NoAppointmentBagde" translatesAutoresizingMaskIntoConstraints="NO" id="XO0-vD-O69">
                                         <rect key="frame" x="90" y="0.0" width="250" height="250"/>
@@ -157,7 +157,7 @@
             </objects>
             <point key="canvasLocation" x="1740.5797101449277" y="49.553571428571423"/>
         </scene>
-        <!--Choose City View Controller-->
+        <!--Şehir Seçin-->
         <scene sceneID="2ob-TV-Xds">
             <objects>
                 <viewController id="yZm-XX-Qfi" customClass="ChooseCityViewController" customModule="Charger" customModuleProvider="target" sceneMemberID="viewController">
@@ -220,12 +220,11 @@
                             <constraint firstItem="rK6-a4-5r7" firstAttribute="leading" secondItem="4Bj-2Q-0ti" secondAttribute="leading" id="oOy-8x-69F"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" id="5if-jI-N82"/>
+                    <navigationItem key="navigationItem" title="Şehir Seçin" leftItemsSupplementBackButton="YES" id="5if-jI-N82"/>
                     <connections>
                         <outlet property="Background" destination="rK6-a4-5r7" id="CtS-nv-zi4"/>
                         <outlet property="TableView" destination="uFa-lS-mgV" id="3x3-w7-aZF"/>
                         <outlet property="chooseCityBackground" destination="KK6-zp-BFp" id="6DI-4s-Cpr"/>
-                        <outlet property="navigationBar" destination="5if-jI-N82" id="Vi9-NN-1Hy"/>
                         <segue destination="qsm-Ua-X96" kind="show" identifier="ChooseStation" id="izz-U6-fZO"/>
                     </connections>
                 </viewController>
@@ -358,7 +357,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5FQ-eE-Q6D" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="uHe-oM-WMR">
-                        <rect key="frame" x="0.0" y="44" width="414" height="104"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" name="grayColor"/>
                         <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
