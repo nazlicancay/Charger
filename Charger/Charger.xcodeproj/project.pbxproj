@@ -33,6 +33,7 @@
 		62E2797F28708F96005FF57E /* apiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E2797E28708F96005FF57E /* apiManager.swift */; };
 		62E279822870935D005FF57E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 62E279812870935D005FF57E /* Alamofire */; };
 		62FC679E28736B9F00906323 /* ProfilePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FC679D28736B9F00906323 /* ProfilePageViewController.swift */; };
+		62FCF2D12881C4F9002EEE69 /* StationModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FCF2D02881C4F9002EEE69 /* StationModels.swift */; };
 		8967C6FCF94D8C9D7D28A73D /* libPods-Charger.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB575A5C4F31077E24E1EAB9 /* libPods-Charger.a */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +81,7 @@
 		62E2797B28708D38005FF57E /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
 		62E2797E28708F96005FF57E /* apiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apiManager.swift; sourceTree = "<group>"; };
 		62FC679D28736B9F00906323 /* ProfilePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePageViewController.swift; sourceTree = "<group>"; };
+		62FCF2D02881C4F9002EEE69 /* StationModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationModels.swift; sourceTree = "<group>"; };
 		BB575A5C4F31077E24E1EAB9 /* libPods-Charger.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Charger.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8D8F022757154D4D8728EA1 /* Pods-Charger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Charger.debug.xcconfig"; path = "Target Support Files/Pods-Charger/Pods-Charger.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				624574652880A55A00DF3195 /* ChooseStationViewController.swift */,
+				62FCF2D02881C4F9002EEE69 /* StationModels.swift */,
 			);
 			name = ChoseStation;
 			sourceTree = "<group>";
@@ -449,6 +452,7 @@
 				629D1FDA287730B600E8F641 /* ChooseCityViewController.swift in Sources */,
 				622459132878C4B2008E9D7D /* CityResponseModel.swift in Sources */,
 				62E2797F28708F96005FF57E /* apiManager.swift in Sources */,
+				62FCF2D12881C4F9002EEE69 /* StationModels.swift in Sources */,
 				624574662880A55A00DF3195 /* ChooseStationViewController.swift in Sources */,
 				6224591128789299008E9D7D /* TableViewCell.swift in Sources */,
 				62AF897A286C6FA400B0DDC7 /* Theme.swift in Sources */,

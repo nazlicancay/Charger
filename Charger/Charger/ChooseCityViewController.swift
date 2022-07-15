@@ -25,6 +25,11 @@ class ChooseCityViewController: UIViewController , UITableViewDataSource, UITabl
   
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        searchController.searchBar.searchTextField.backgroundColor = Theme.backgroundColor
+        searchController.searchBar.layer.backgroundColor = Theme.backgroundColor?.cgColor
+        searchController.searchBar.searchTextField.layer.borderWidth = 1
+        searchController.searchBar.searchTextField.layer.borderColor = Theme.filterColor?.cgColor
         initSearchController()
 
 
