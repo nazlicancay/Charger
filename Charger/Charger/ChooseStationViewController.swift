@@ -51,11 +51,12 @@ class ChooseStationViewController: UIViewController {
         
         Background.backgroundColor = Theme.backgroundColor
         for i in 0...2 {
-             
-             ProvinceLabels[i].text = ApiManager.APIInstance.StationNames[i]
-            print(ProvinceLabels[i]  , " ----------- " , ApiManager.APIInstance.StationNames[i] )
-             DistanceLabels[i].text = String(ApiManager.APIInstance.StationDistance[i])
-             NumberOfSocketsLabels[i].text = String(ApiManager.APIInstance.StationSocketCount[i])
+            ProvinceLabels[i].textColor = Theme.textColor
+            DistanceLabels[i].textColor = Theme.textColor
+            NumberOfSocketsLabels[i].textColor = Theme.textColor
+            ProvinceLabels[i].text = ApiManager.APIInstance.StationNames[i]
+            DistanceLabels[i].text = String(ApiManager.APIInstance.StationDistance[i])
+            NumberOfSocketsLabels[i].text = String(ApiManager.APIInstance.StationSocketCount[i])
          }
     
         
