@@ -200,7 +200,6 @@ class ApiManager{
                    
                     if response.response?.statusCode == 200{
                         
-                       print(json)
                         GetStationInfo(data: data!)
                         
                     }
@@ -229,9 +228,9 @@ class ApiManager{
     }
     
     func GetStationInfo(data  : Data ){
-
-            let DecodedData = try! JSONDecoder().decode([station].self, from: data)
-            print(station.self)
+        
+        let DecodedData = try! JSONDecoder().decode([station].self, from: data)
+        print(DecodedData[0].geoLocation?.province)
 
            
         }
