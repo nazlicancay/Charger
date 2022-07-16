@@ -10,6 +10,15 @@ import SwiftUI
 
 class ChooseStationViewController: UIViewController {
 
+    @IBOutlet weak var StationImage1: UIImageView!
+    
+    @IBOutlet weak var StationImage2: UIImageView!
+    
+    @IBOutlet weak var StationImage3: UIImageView!
+    @IBOutlet weak var StationStack3: UIStackView!
+    @IBOutlet weak var StationStack2: UIStackView!
+    @IBOutlet weak var StationStack1: UIStackView!
+   
     @IBOutlet var Background: UIView!
     
     @IBOutlet weak var ProvinceLabel2: UILabel!
@@ -36,12 +45,14 @@ class ChooseStationViewController: UIViewController {
     var ProvinceLabels = [UILabel]()
     var DistanceLabels = [UILabel]()
     var NumberOfSocketsLabels = [UILabel]()
+    var StationImages = [UIImageView]()
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         StaionViewUpdate()
         StationViewDisplay()
+        StationTypeImage()
 
         // Do any additional setup after loading the view.
     }
@@ -74,6 +85,11 @@ class ChooseStationViewController: UIViewController {
       NumberOfSocketsLabels.append(NumberOfSockets1)
       NumberOfSocketsLabels.append(NumberOfSockets2)
       NumberOfSocketsLabels.append(NumberOfSockets3)
+      
+      StationImages.append(StationImage1)
+      StationImages.append(StationImage2)
+      StationImages.append(StationImage3)
+
 
       print(ProvinceLabels.count)
 
@@ -81,6 +97,20 @@ class ChooseStationViewController: UIViewController {
         
     }
     
+    func StationTypeImage(){
+        
+        for i in 0...2{
+            if(ApiManager.APIInstance.StationSocketType[i] == "AC"){
+                StationImages[i].image = UIImage(named: "AC")
+            }
+            else if (ApiManager.APIInstance.StationSocketType[i] == "DC"){
+                StationImages[i].image = UIImage(named: "DC")
+            }
+            else{
+                StationImages[i].image = UIImage(named: "AC-DC")
+            }
+        }
+    }
     
 
     /*

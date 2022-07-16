@@ -23,6 +23,7 @@ class ApiManager{
     var StationNames = [String]()
     var StationDistance = [Double]()
     var StationSocketCount = [Int]()
+    var StationSocketType = [String]()
     
 
     func callingRegisterAPI(register : login , completionHandler : @escaping (Bool)->()){
@@ -236,9 +237,10 @@ class ApiManager{
             StationNames.append(DecodedData[i].stationName!)
             StationDistance.append(DecodedData[i].distanceInKM!)
             StationSocketCount.append(DecodedData[i].socketCount!)
+            StationSocketType.append(DecodedData[i].sockets![i].chargeType!)
+            
             
         }
-        print("api manager ",StationNames.count)
         
            
         }
