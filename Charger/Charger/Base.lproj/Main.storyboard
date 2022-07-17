@@ -86,7 +86,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="veB-PQ-EY7">
-                                <rect key="frame" x="-8" y="278.5" width="430" height="396"/>
+                                <rect key="frame" x="-8" y="282.5" width="430" height="396"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NoAppointmentBagde" translatesAutoresizingMaskIntoConstraints="NO" id="XO0-vD-O69">
                                         <rect key="frame" x="90" y="0.0" width="250" height="250"/>
@@ -602,7 +602,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5FQ-eE-Q6D" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="uHe-oM-WMR">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="104"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" name="grayColor"/>
                         <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
