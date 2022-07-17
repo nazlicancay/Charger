@@ -10,7 +10,7 @@ This study is Patika ios bootcamp graduation project.
 
 # Design Pattern
 
-<img src="https://github.com/nazlicancay/Charger/blob/main/Design%20Pattern.jpeg" width="400" height="200">
+<img src="https://github.com/nazlicancay/Charger/blob/main/Design%20Pattern.jpeg" width="400" height="120">
 
 
 # ScreenShots
