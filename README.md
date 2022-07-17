@@ -3,4 +3,4 @@
 This study is Patika ios bootcamp graduation project.
 
 
-DeadLine : 17 Temmuz 2022 saat 23.59 (18 Temmuz 2022 00.00)
+<img src="https://github.com/nazlicancay/Charger/blob/main/Ekran%20Resmi%202022-07-18%2000.22.52.png" width="200" height="395">
