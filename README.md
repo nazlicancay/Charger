@@ -10,6 +10,9 @@ This study is Patika ios bootcamp graduation project.
 
 # Design Pattern
 
+- MVVM
+
+
 <img src="https://github.com/nazlicancay/Charger/blob/main/Design%20Pattern.jpeg" width="400" height="120">
 
 
