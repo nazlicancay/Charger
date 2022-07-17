@@ -1,7 +1,6 @@
-# Proje
+# Charger App
 
-Proje dokumanlarina ekteki zip dosyasindan ulasabilirsiniz.  
-Degisiklik vs olursa Telegramdan gorus bildirip gunceleme yapabiliriz.  
-Simdiden hepinize kolay gelsin.  
-  
+This study is Patika ios bootcamp graduation project.
+
+
 DeadLine : 17 Temmuz 2022 saat 23.59 (18 Temmuz 2022 00.00)
